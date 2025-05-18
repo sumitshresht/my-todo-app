@@ -8,7 +8,7 @@ const App = () => {
   const storageKey = `tasks_${user}`;
 
   const [tasks, setTasks] = useState(() => {
-    if (!user) return []; // if no user yet, return empty
+    if (!user) return []; 
     const stored = sessionStorage.getItem(`tasks_${user}`);
     return stored ? JSON.parse(stored) : [];
   });
@@ -65,7 +65,7 @@ const App = () => {
             value={newTask}
             onChange={(e) => setNewTask(e.target.value)}
             placeholder="Enter new task..."
-            className="flex-1 px-4 py-2 rounded-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
+            className="flex w-2/3 px-4 py-2 rounded-lg bg-gray-800 text-white placeholder-gray-400 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 transition"
           />
           <button
             className="bg-green-500 px-4 py-2 rounded"

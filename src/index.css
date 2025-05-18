@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optional: You can add custom styles below if needed */
+
 body {
   @apply bg-black text-white;
 }

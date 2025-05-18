@@ -1,6 +1,6 @@
 const TaskCard = ({ task, toggleTask, deleteTask }) => {
   return (
-    <div className="flex items-center justify-between bg-gray-800 p-4 rounded shadow">
+    <div className="flex w-4/5 items-center justify-between bg-gray-800 p-4 rounded shadow">
       <label className="flex items-center gap-3 cursor-pointer">
         <input
           type="checkbox"
@@ -16,7 +16,7 @@ const TaskCard = ({ task, toggleTask, deleteTask }) => {
       {task.done && (
         <button
           onClick={() => deleteTask(task.id)}
-          className="text-red-400 hover:text-red-600 transition"
+          className="text-red-400 border-2 border-gray-800 bg-gray-700 p-1 w-20 font-semibold rounded-md hover:text-red-600 transition"
         >
           Delete
         </button>
